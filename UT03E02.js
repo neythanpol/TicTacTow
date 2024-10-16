@@ -36,7 +36,7 @@ function comprobarGanador(simbolo){
     ]
 
     for (let combinacion of combinacionesGanadoras) {
-        if (document.getElementById(combinacion[0]) === simbolo && document.getElementById(combinacion[1]) === simbolo && document.getElementById(combinacion[2]) === simbolo) {
+        if (document.getElementById(combinacion[0]).innerText === simbolo && document.getElementById(combinacion[1]).innerText === simbolo && document.getElementById(combinacion[2]).innerText === simbolo) {
             return true;
         }
     }
