@@ -12,12 +12,14 @@ let turno = 'X';
 while(true){
     casilla = prompt('Le toca al jugador '+ turno);
     celda = document.getElementById(casilla);
-    pintarXuO(celda);
-    if (comprobarGanador(turno)) {
-        alert('Enhorabuena jugador '+turno+' has ganado la partida');
-        break;
+    let cambiarTurno = pintarXuO(celda);
+    if (cambiarTurno === true){
+        if (comprobarGanador(turno)) {
+            alert('Enhorabuena jugador '+turno+' has ganado la partida');
+            break;
+        }
+            turno = (turno === 'X') ? 'O' : 'X';
     }
-    turno = (turno === 'X') ? 'O' : 'X';
 }
 
 function comprobarGanador(simbolo){
@@ -45,9 +47,15 @@ function comprobarGanador(simbolo){
 
 
 function pintarXuO(celda){
-    if (turno === 'X') {
-        celda.innerText = 'X';
+    if (celda.innerText != '') {
+        alert('Repite en una celda vacía');
+        return false;
     }else{
-        celda.innerText = 'O';
+        if (turno === 'X') {
+            celda.innerText = 'X';
+        }else{
+            celda.innerText = 'O';
+        }
+        return true;
     }
 }
