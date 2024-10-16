@@ -8,8 +8,9 @@
 let ganador = null;
 
 let turno = 'X';
+let cont = 0;
 
-while(true){
+while(cont <= 9){
     casilla = prompt('Le toca al jugador '+ turno);
     celda = document.getElementById(casilla);
     let cambiarTurno = pintarXuO(celda);
@@ -19,6 +20,7 @@ while(true){
             break;
         }
             turno = (turno === 'X') ? 'O' : 'X';
+            cont++;
     }
 }
 
