@@ -22,7 +22,13 @@ while(cont <= 9){
             turno = (turno === 'X') ? 'O' : 'X';
             cont++;
     }
+    if (cont == 9) {
+        alert('Empate');
+        cont++;
+    }
 }
+
+
 
 function comprobarGanador(simbolo){
     let combinacionesGanadoras = [
