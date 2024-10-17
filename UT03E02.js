@@ -5,8 +5,6 @@
 // Hay que comprobar si la casilla está libre o no, si hay tres en raya, o si el tablero está lleno sin tres en raya (tablas)
 // Piensa en qué habrá que hacer distinto en caso de que queramos programar el segundo jugador, bonus points si tu código permite añadir este código sin grandes cambios ;-) (nota: no hace falta programar el segundo jugador, sólo pensar en cómo modificar nuestro código para que, por ejemplo, lo pueda implementar otra persona)
 
-let ganador = null;
-
 let turno = 'X';
 let cont = 0;
 
