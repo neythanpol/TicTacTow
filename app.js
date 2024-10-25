@@ -31,7 +31,7 @@ function comprobarTablas() {
 }
 
 function comprobarHorizontal(){
-
+    
 }
 
 function comprobarVertical(){
